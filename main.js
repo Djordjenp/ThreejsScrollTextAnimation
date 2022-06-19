@@ -25,12 +25,13 @@ function allowScroll() {
             start: "top top",
             pin: true,
             end: `+=${window.innerHeight * 3}`,
-            scrub: .5
+            scrub: .5,
+            markers: true
         }
     })
-        .to(".threejs__intro__context__text1", {x: -100, opacity: 0})
-        .to(".threejs__intro__context__text2", {x: 100, opacity: 0}, "<")
-        .to(".threejs__intro__context__text3__Wrapper", { opacity: 1}, "<")
+        .to(".threejs__intro__content__text1", {x: -100, opacity: 0})
+        .to(".threejs__intro__content__text2", {x: 100, opacity: 0}, "<")
+        .to(".threejs__intro__content__text3__Wrapper", { opacity: 1}, "<")
         .from(".threejs__intro__context__text3", {opacity: 0, x: 0, stagger: 1}, "<")
         .to(".threejs__intro__context__text3", {x: 200, opacity: 0, stagger: 1}, "<+1")
 }
